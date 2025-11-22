@@ -19,8 +19,8 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 21098
           script: |
-            #source /home/doksummz/nodevenv/livequiz.ng/20/bin/activate && cd /home/doksummz/livequiz.ng
-            cd /home/doksummz/techservice.ng
+            source /home/doksummz/nodevenv/livequiz.ng/20/bin/activate && cd /home/doksummz/livequiz.ng
+            #cd /home/doksummz/techservice.ng
             # Start the agent and add the key to the current shell environment
             eval $(ssh-agent -s)
             
@@ -28,7 +28,7 @@ jobs:
             ssh-add ~/.ssh/github 
 
             git pull
-            #npm install
+            npm install
             
             # Stop the agent after use
             ssh-agent -k
