@@ -11,7 +11,12 @@ const allNigeriaStates = [
   "ekiti", "lagos", "ogun", "ondo", "osun", "oyo"
 ];
 const app = express();
-
+app.use((req, res, next) => {
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.set('Pragma', 'no-cache');
+  res.set('Expires', '0');
+  next();
+});
 /*   get routes  */
 app.get("/", (req, res) => {
     res.end(ojs.get("web/index.html", { location: "Nigeria" }));
