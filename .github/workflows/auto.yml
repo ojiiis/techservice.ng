@@ -19,7 +19,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 21098
           script: |
-            source /home/doksummz/nodevenv/livequiz.ng/20/bin/activate && cd /home/doksummz/livequiz.ng
+            source /home/doksummz/nodevenv/home/doksummz/techservice.ng/20/bin/activate && cd /home/doksummz/home/doksummz/techservice.ng
             #cd /home/doksummz/techservice.ng
             # Start the agent and add the key to the current shell environment
             eval $(ssh-agent -s)

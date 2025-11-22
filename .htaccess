@@ -1,8 +1,16 @@
-
 RewriteEngine on
-
 RewriteOptions inherit
 RewriteCond %{HTTP_HOST} ^techservice\.ng$ [OR]
 RewriteCond %{HTTP_HOST} ^www\.techservice\.ng$
 RewriteRule ^(.*)$ "https\:\/\/techservice\.ng\/$1" [R=301,L]
-
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/doksummz/home/doksummz/techservice.ng"
+PassengerBaseURI "/"
+PassengerNodejs "/home/doksummz/nodevenv/home/doksummz/techservice.ng/20/bin/node"
+PassengerAppType node
+PassengerStartupFile index.js
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION BEGIN
+<IfModule Litespeed>
+</IfModule>
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION END
