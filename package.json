@@ -19,6 +19,6 @@
   "dependencies": {
     "express": "^5.1.0",
     "nodemon": "^3.1.11",
-    "ojs-loader": "^1.0.4"
+    "ojs-loader": "^1.0.5"
   }
 }

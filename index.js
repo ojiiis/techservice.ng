@@ -3,7 +3,7 @@ const  {ojs} = require("ojs-loader");
 const {seo} = require("./seo.js");
 
 const app = express();
-app.use(express.static('assets'));
+app.use(express.static('public'));
 app.use((req, res, next) => {
   res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
   res.set('Pragma', 'no-cache');
@@ -12,7 +12,7 @@ app.use((req, res, next) => {
 });
 /*   get routes  */
 app.get("/", (req, res) => {
-    res.end(ojs.get("web/index.html", { location: "Nigeria",cities:"",hero:"" }));
+    res.end(ojs.get("web/index.html", { location: "Nigeria",cities:"",hero:"" },false));
 });
 
 app.get("/:location", (req, res) => { 
@@ -22,7 +22,7 @@ app.get("/:location", (req, res) => {
     let hero = seo.nigeriaStateCitiesHeroContent[location];
     location = location.charAt(0).toUpperCase() + location.slice(1).toLowerCase();
     
-    res.end(ojs.get("web/index.html", { location,cities:" - "+cities.join(", "),hero:hero }));
+    res.end(ojs.get("web/index.html", { location,cities:" - "+cities?.join(", "),"hero":hero },false));
 });
 
 app.get("/sample",(req,res)=>{
