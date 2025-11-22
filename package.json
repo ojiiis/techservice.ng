@@ -17,6 +17,7 @@
   "homepage": "https://github.com/ojiiis/techservice.ng#readme",
   "description": "",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "ojs-loader": "^1.0.4"
   }
 }
