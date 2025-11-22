@@ -13,4 +13,6 @@ app.get("/",(req,res)=>{
 app.get("/sample",(req,res)=>{
    res.end("");
 });
+
+app.listen(3000);
 /*   get routes  */
