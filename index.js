@@ -11,6 +11,7 @@ const allNigeriaStates = [
   "ekiti", "lagos", "ogun", "ondo", "osun", "oyo"
 ];
 const app = express();
+app.use(express.static('assets'));
 app.use((req, res, next) => {
   res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
   res.set('Pragma', 'no-cache');
