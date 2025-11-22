@@ -17,6 +17,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: doksummz
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 21098
           script: |
             #source /home/doksummz/nodevenv/livequiz.ng/20/bin/activate && cd /home/doksummz/livequiz.ng
             cd /home/doksummz/techservice.ng
