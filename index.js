@@ -3,18 +3,25 @@ const  {ojs} = require("ojs-loader");
 
 
 const allNigeriaStates = [
-  "Benue", "FCT Abuja", "Kogi", "Kwara", "Nasarawa", "Niger", "Plateau",
-  "Adamawa", "Bauchi", "Borno", "Gombe", "Taraba", "Yobe",
-  "Kaduna", "Kano", "Katsina", "Kebbi", "Sokoto", "Jigawa", "Zamfara",
-  "Abia", "Anambra", "Ebonyi", "Enugu", "Imo",
-  "Akwa Ibom", "Bayelsa", "Cross River", "Delta", "Edo", "Rivers",
-  "Ekiti", "Lagos", "Ogun", "Ondo", "Osun", "Oyo"
+  "benue", "fct-abuja", "kogi", "kwara", "nasarawa", "niger", "plateau",
+  "adamawa", "bauchi", "borno", "gombe", "taraba", "yobe",
+  "kaduna", "kano", "katsina", "kebbi", "sokoto", "jigawa", "zamfara",
+  "abia", "anambra", "ebonyi", "enugu", "imo",
+  "akwa-ibom", "bayelsa", "cross-river", "delta", "edo", "rivers",
+  "ekiti", "lagos", "ogun", "ondo", "osun", "oyo"
 ];
 const app = express();
 
 /*   get routes  */
-app.get("/",(req,res)=>{
-    res.end(ojs.get('web/index.html',{location:"Nigeria"}));
+app.get("/", (req, res) => {
+    res.end(ojs.get("web/index.html", { location: "Nigeria" }));
+});
+
+app.get("/:location", (req, res) => {
+    
+    let location = (allNigeriaStates.includes(req.params.location))?req.params.location:"Nigeria";
+    location = location.charAt(0).toUpperCase() + location.slice(1).toLowerCase();
+    res.end(ojs.get("web/index.html", { location }));
 });
 
 app.get("/sample",(req,res)=>{
