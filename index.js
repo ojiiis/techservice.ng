@@ -22,7 +22,7 @@ app.get("/:location", (req, res) => {
     let hero = seo.nigeriaStateCitiesHeroContent[location];
     location = location.charAt(0).toUpperCase() + location.slice(1).toLowerCase();
     
-    res.end(ojs.get("web/index.html", { location,cities:" - "+cities.join(", "),hero }));
+    res.end(ojs.get("web/index.html", { location,cities:" - "+cities.join(", "),hero:hero }));
 });
 
 app.get("/sample",(req,res)=>{
