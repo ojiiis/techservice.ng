@@ -15,7 +15,7 @@ jobs:
         with:
           # These must be stored as GitHub Secrets (see Step 3)
           host: ${{ secrets.SSH_HOST }}
-          username: ubuntu
+          username: doksummz
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             #source /home/doksummz/nodevenv/livequiz.ng/20/bin/activate && cd /home/doksummz/livequiz.ng
