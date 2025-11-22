@@ -142,10 +142,10 @@
                     <nav id="desktop-nav" class="main-nav">
                         <ul>
                             <li class="has-dropdown location-dropdown">
-                                <span id="location-trigger" role="button"
+                                <span class="location-trigger" role="button"
                                     tabindex="0" aria-expanded="false"
                                     aria-controls="state-selection-modal">
-                                    <span id="current-location"><var>location</var></span>
+                                    <span class="current-location"><var>location</var></span>
                                     <i
                                         class="fas fa-caret-down dropdown-icon"></i>
                                 </span>
@@ -180,10 +180,10 @@
                 <nav id="mobile-nav" class="mobile-menu-hidden">
                     <ul>
                         <li class="has-dropdown location-dropdown">
-                            <span id="location-trigger" role="button"
+                            <span class="location-trigger" role="button"
                                 tabindex="0" aria-expanded="false"
                                 aria-controls="state-selection-modal">
-                                <span id="current-location"><var>location</var></span> <i
+                                <span class="current-location"><var>location</var></span> <i
                                     class="fas fa-caret-down dropdown-icon"></i>
                             </span>
                         </li>
@@ -833,7 +833,7 @@
 
             </div>
         </div>
-        <!--div id="mainModal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+<!--div id="mainModal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="modal-content" role="document">
         
         <header class="modal-header">
@@ -884,8 +884,8 @@ const nigeriaStates = {
 };
 
 const modal = document.getElementById('mainModal');
-const locationTrigger = document.getElementById('location-trigger');
-const currentLocationSpan = document.getElementById('current-location');
+const locationTrigger = document.getElementsByClassName('location-trigger');
+const currentLocationSpan = document.getElementsByClassName('current-location');
 const stateListContainer = document.getElementById('state-selection-list');
 
 // Function to handle state selection click
@@ -898,7 +898,7 @@ function handleStateSelection(event) {
     console.log(`State Selected: ${selectedState}`); // Debug confirmation
 
     // 1. Update the navigation text
-    currentLocationSpan.textContent = selectedState;
+    [...currentLocationSpan].map(v=>v.textContent = selectedState);
     
     // 2. Visual feedback 
     document.querySelectorAll('.state-button').forEach(btn => btn.classList.remove('selected'));
@@ -964,19 +964,21 @@ function showModal() {
     modal.classList.add('is-visible');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open'); 
-    locationTrigger.setAttribute('aria-expanded', 'true');
+    [...locationTrigger].map(v=>v.setAttribute('aria-expanded', 'true'));
+    
 }
 
 function hideModal() {
     modal.classList.remove('is-visible');
     modal.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('modal-open');
-    locationTrigger.setAttribute('aria-expanded', 'false');
+    [...locationTrigger].map(v=>v.setAttribute('aria-expanded', 'false'));
 }
 
 // --- INITIALIZATION ---
 // 1. Event listener to open the modal 
-locationTrigger.addEventListener('click', showModal);
+[...locationTrigger].map(v=>v.addEventListener('click', showModal));
+
 
 // 2. Event listener to close the modal
 modal.addEventListener('click', function(event) {

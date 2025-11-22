@@ -23,8 +23,7 @@ app.get("/", (req, res) => {
     res.end(ojs.get("web/index.html", { location: "Nigeria" }));
 });
 
-app.get("/:location", (req, res) => {
-    
+app.get("/:location", (req, res) => { 
     let location = (allNigeriaStates.includes(req.params.location))?req.params.location:"Nigeria";
     location = location.charAt(0).toUpperCase() + location.slice(1).toLowerCase();
     res.end(ojs.get("web/index.html", { location }));
