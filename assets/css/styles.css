@@ -1,0 +1,1215 @@
+/* ============================================== */
+/* 1. Global Variables & Base Styles */
+/* ============================================== */
+
+:root {
+    --primary-color: #007bff; /* Vibrant Blue for emphasis */
+    --secondary-color: #2c3e50; /* Dark Blue/Grey for text/footer */
+    --accent-color: #f39c12; /* Optional: Yellow/Orange for highlights */
+    --max-content-width: 1200px;
+    --font-family: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    color: #333;
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+/* Base Link & Button Styles */
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+.section-inner {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    padding: 6rem 0;
+}
+
+/* Section Headings */
+.section-heading {
+    margin-bottom: 3rem;
+}
+
+.centered-heading {
+    text-align: center;
+}
+
+.section-tag {
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.centered-heading h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.centered-heading p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0.5rem auto 0;
+}
+
+/* Common Button Styles */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, opacity 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* Utility Class */
+.desktop-only {
+    display: block;
+}
+
+
+/* ============================================== */
+/* 2. Header & Navigation */
+/* ============================================== */
+
+#site-header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.header-inner {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.logo-dot {
+    color: var(--primary-color);
+}
+
+/* Desktop Navigation */
+#desktop-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#desktop-nav a {
+    color: #555;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+#desktop-nav a:hover,
+#desktop-nav a.active {
+    color: var(--primary-color);
+}
+
+.cta-link {
+    background-color: var(--primary-color);
+    color: #ffffff !important; 
+    border-radius: 4px;
+    padding: 0.5rem 1.25rem;
+    margin-left: 1rem;
+}
+
+.cta-link:hover {
+    opacity: 0.9;
+}
+
+/* Header Utilities (Contact Links and Toggle) */
+.header-utilities {
+    display: flex;
+    align-items: center;
+}
+
+.contact-links a {
+    color: #777;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.contact-links a:hover {
+    color: var(--primary-color);
+}
+
+#mobile-menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    cursor: pointer;
+    display: none; /* Hidden by default on desktop */
+}
+
+/* Mobile Navigation */
+#mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+#mobile-nav ul {
+    list-style: none;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+#mobile-nav li {
+    border-bottom: 1px solid #eee;
+}
+
+#mobile-nav a {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.mobile-menu-hidden {
+    display: none;
+
+}
+
+
+/* ============================================== */
+/* 3. Hero Section */
+/* ============================================== */
+
+.hero-section {
+    padding: 6rem 1.5rem;
+    background-color: #f8faff;
+}
+
+.hero-inner {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 3rem;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem); 
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.hero-content .highlight {
+    color: var(--primary-color);
+}
+
+.hero-content .subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.hero-ctas {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.seo-feature-bar {
+    margin-top: 1rem;
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+    color: #777;
+    font-style: italic;
+    border-top: 1px solid #eee;
+}
+
+.seo-feature-bar i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+.hero-visual .visual-placeholder {
+    width: 100%;
+    height:140px;
+    padding-top: 75%; 
+    background-color: #e0e7ff; 
+    border-radius: 12px;
+    position:relative;
+    overflow:hidden;
+}
+
+/* ============================================== */
+/* 4. Services Section */
+/* ============================================== */
+
+.services-section {
+    padding-bottom: 3rem;
+    background-color: #f8f8f8;
+}
+
+#services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 5px solid transparent;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-top-color: var(--primary-color);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.service-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    min-height: 75px; 
+}
+
+.service-cta {
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+
+/* ============================================== */
+/* 5. About Us Section */
+/* ============================================== */
+
+.about-section {
+    padding: 6rem 1.5rem;
+    background-color: #ffffff;
+}
+
+.about-grid {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 3fr; 
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-content h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.value-list {
+    margin: 1.5rem 0;
+}
+
+.value-list ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.value-list li {
+    font-weight: 600;
+    color: #444;
+}
+
+.value-list i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+.timeline-graphic {
+    width: 100%;
+    padding-top: 100%; 
+    background-color: #e0e7ff; 
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    background-image:url('../images/Tech-Service-Ng-Empowering-Nigerias-Digital-Economy.png');
+    background-size:cover;
+    background-position:center;
+}
+
+
+/* ============================================== */
+/* 6. Testimonials Section */
+/* ============================================== */
+
+.testimonials-section {
+    padding: 6rem 1.5rem;
+    background-color: #f8faff;
+}
+
+#testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rating {
+    color: #ffc107;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+blockquote {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+    margin: 0 0 1.5rem 0;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1rem;
+    font-style: italic;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+}
+
+.client-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+    border: 2px solid var(--primary-color);
+}
+
+.client-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.client-name {
+    font-weight: 700;
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+.client-title {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+
+/* ============================================== */
+/* 7. Contact Form Section */
+/* ============================================== */
+
+.contact-section {
+    padding: 6rem 1.5rem;
+    background-color: #ffffff; 
+}
+
+.contact-grid {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 3fr 2fr; 
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.form-container {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+    width: calc(50% - 0.75rem);
+    display: inline-block;
+    vertical-align: top;
+}
+
+.form-group:nth-child(even) {
+    margin-left: 1.5rem;
+}
+
+.form-group.full-width {
+    width: 100%;
+    margin-left: 0;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Direct Contact Info Block */
+.contact-info-block {
+    padding: 2rem;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border-radius: 8px;
+}
+
+.contact-info-block h3 {
+    font-size: 1.75rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.5rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: #ffd700; /* Contrast color */
+    padding-top: 4px;
+}
+
+.info-item p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.info-item a {
+    color: #ffffff;
+}
+
+.map-placeholder {
+    width: 100%;
+    height:90px;
+    padding-top: 50%;
+    background-color: #557999; 
+    border-radius: 8px;
+    margin-top: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position:relative;
+}
+
+
+/* ============================================== */
+/* 8. Footer Section */
+/* ============================================== */
+
+.footer-section {
+    background-color: var(--secondary-color);
+    color: #ecf0f1;
+    font-size: 0.95rem;
+}
+
+.footer-top {
+    padding: 3rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-top .footer-inner {
+    display: grid;
+    grid-template-columns: 2fr 1.25fr 1.25fr 1.5fr; 
+    gap: 2.5rem;
+}
+
+.footer-col h4 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 1.25rem;
+    font-weight: 700;
+}
+
+.footer-brand .footer-logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.footer-brand p {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links ul, .footer-services ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li, .footer-services li {
+    margin-bottom: 0.75rem;
+    color: #bdc3c7;
+}
+
+.footer-links a {
+    color: #bdc3c7;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.footer-contact .contact-item {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    align-items: flex-start;
+}
+
+.footer-contact .contact-item i {
+    color: var(--primary-color);
+    font-size: 1rem;
+    padding-top: 4px;
+}
+
+.footer-contact a {
+    color: #bdc3c7;
+}
+
+.footer-contact a:hover {
+    color: var(--primary-color);
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: #ffffff;
+    font-size: 1.1rem;
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.social-links a:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    padding: 1.5rem 1.5rem;
+}
+
+.footer-bottom .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.legal-links a {
+    color: #bdc3c7;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.legal-links a:hover {
+    color: var(--primary-color);
+}
+
+
+/* ============================================== */
+/* 9. Responsive Adjustments (Mobile First Overrides) */
+/* ============================================== */
+
+@media (max-width: 992px) {
+    /* Header */
+    #desktop-nav, .desktop-only {
+        display: none;
+    }
+
+    #mobile-menu-toggle {
+        display: block;
+    }
+    
+    /* Hero */
+    .hero-inner {
+        grid-template-columns: 1fr; 
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .hero-visual {
+        order: -1;
+    }
+    
+    .hero-ctas {
+        justify-content: center;
+    }
+    
+    /* About */
+    .about-grid {
+        grid-template-columns: 1fr; 
+        gap: 2rem;
+    }
+
+    .about-visual {
+        order: -1;
+    }
+
+    .timeline-graphic {
+        padding-top: 60%;
+    }
+    
+    /* Contact */
+    .contact-grid {
+        grid-template-columns: 1fr; 
+        gap: 2rem;
+    }
+    
+    .form-group {
+        width: 100%;
+        margin-left: 0 !important;
+    }
+
+    /* Footer */
+    .footer-top .footer-inner {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .copyright {
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Testimonials */
+    #testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-card.desktop-only {
+        display: none !important;
+    }
+}
+
+
+
+
+
+
+
+/* ====================================
+   MODAL STYLING (To be added to styles.css)
+   ==================================== */
+
+/* 1. Backdrop (Hides the entire screen and centers the content) */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* State when the modal is active/visible */
+.modal-backdrop.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Prevent background scrolling when modal is open */
+body.modal-open {
+    overflow: hidden;
+}
+
+/* 2. Modal Content Container */
+.modal-content {
+    background-color: white;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transform: translateY(-50px);
+    transition: transform 0.3s ease;
+    
+    /* 🔑 CRITICAL FIX: Add max-height to force scrollbar when content exceeds this size */
+    max-height: 90vh; /* Limits the modal height to 90% of the viewport height */
+    overflow-y: auto; /* Activates the scrollbar if max-height is exceeded */
+}
+
+/* Animation when modal is visible */
+.modal-backdrop.is-visible .modal-content {
+    transform: translateY(0);
+}
+
+/* 3. Header and Close Button */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    
+    /* 🔑 FIX FOR SCROLLING: Prevent header from scrolling with content */
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 10;
+}
+
+.modal-header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--color-dark-text); 
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-modal:hover {
+    color: var(--color-primary-blue);
+}
+
+/* 4. Body and Form Styles */
+.modal-body {
+    /* Padding is applied here, which moves with the scrollbar */
+    padding: 30px 20px;
+}
+
+/* ... other modal-body styles ... */
+
+
+/* ====================================
+   MODAL - STATE SELECTION STYLES
+   ==================================== */
+
+.state-zone-group {
+    margin-bottom: 25px;
+}
+
+.state-zone-group h3 {
+    font-size: 1.15rem;
+    color: var(--color-primary-blue);
+    border-bottom: 2px solid var(--color-light-grey);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* Grid layout for displaying states */
+.state-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 10px; /* Use gap for spacing instead of &nbsp; */
+}
+
+/* Individual state buttons/links (using <a> as per your final JS) */
+.state-button {
+    display: block;
+    width: 100%;
+    padding: 8px 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-dark-text);
+    font-weight: 500;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.state-button:hover,
+.state-button.selected {
+    background-color: var(--color-primary-blue);
+    border-color: var(--color-primary-blue);
+    color: white;
+}
+
+/* ====================================
+   MODAL - STATE SELECTION STYLES
+   ==================================== */
+
+
+
+
+
+
+
+
+
+/* Style for the main container inside the modal body */
+#state-selection-list {
+    margin-top: 15px;
+}
+
+.state-zone-group {
+    margin-bottom: 25px;
+}
+
+.state-zone-group h3 {
+    font-size: 1.15rem;
+    color: var(--color-primary-blue);
+    border-bottom: 2px solid var(--color-light-grey);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* Grid layout for displaying states */
+.state-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 10px;
+}
+
+/* Individual state buttons/links */
+.state-button {
+    display: block;
+    width: 100%;
+    padding: 8px 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-dark-text);
+    font-weight: 500;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.state-button:hover,
+.state-button.selected {
+    background-color: var(--color-primary-blue);
+    border-color: var(--color-primary-blue);
+    color: white;
+}
+
+/* Ensure the location dropdown trigger looks like a clickable item */
+.location-dropdown span {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.location-dropdown span:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-icon {
+    font-size: 0.75rem;
+    margin-left: 5px;
+}
+
+
+#error-404-content {
+    padding: 80px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    min-height: 80vh; /* Ensure it takes up most of the screen */
+    display: flex;
+    align-items: center;
+}
+
+.error-code {
+    font-size: 8rem;
+    font-weight: 700;
+    color: var(--color-primary-blue); /* Use your brand color */
+    display: block;
+    margin-bottom: 20px;
+}
+
+.error-wrapper h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.lead-text {
+    font-size: 1.15rem;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.error-actions a {
+    margin: 0 10px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.search-box-404 {
+    margin: 30px auto;
+    max-width: 450px;
+}
+
+.search-box-404 form {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.search-box-404 input {
+    flex-grow: 1;
+    border: none;
+    padding: 12px 15px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-box-404 .btn-search {
+    background-color: var(--color-dark-text);
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.category-links {
+    margin-top: 20px;
+    font-size: 0.95rem;
+}
+
+
+
+
+
+
+/* ======================================= */
+/* PRIVACY POLICY PAGE STYLES              */
+/* ======================================= */
+
+.policy-section {
+    padding: 3rem 0; /* Replaced: var(--space-xl) (48px) */
+    background-color: #ffffff; /* Replaced: var(--color-background-light) */
+}
+
+.policy-container {
+    max-width: 750px; /* Replaced: var(--max-width-text) */
+    margin: 0 auto;
+    padding: 0 1.5rem; /* Replaced: var(--space-md) (24px) */
+    line-height: 1.7; /* Increased line height for readability */
+    color: #343a40; /* Replaced: var(--color-text-dark) */
+    font-size: 1rem; /* Replaced: var(--font-size-base) */
+}
+
+/* Headings */
+.policy-container h1 {
+    font-size: 2rem; /* Replaced: var(--font-size-h2) (32px) */
+    font-weight: 700; /* Replaced: var(--font-weight-bold) */
+    margin-bottom: 0.5rem; /* Replaced: var(--space-xs) (8px) */
+    color: #0056b3; /* Replaced: var(--color-primary-dark) */
+}
+
+.policy-container h2 {
+    font-size: 1.5rem; /* Replaced: var(--font-size-h3) (24px) */
+    font-weight: 600; /* Replaced: var(--font-weight-medium) */
+    margin-top: 2rem; /* Replaced: var(--space-lg) (32px) */
+    margin-bottom: 1rem; /* Replaced: var(--space-sm) (16px) */
+    border-bottom: 2px solid #dee2e6; /* Replaced: var(--color-border-default) */
+    padding-bottom: 0.25rem; /* Replaced: var(--space-xxs) (4px) */
+    color: #343a40; /* Replaced: var(--color-text-dark) */
+}
+
+.policy-container h3 {
+    font-size: 1.125rem; /* Replaced: var(--font-size-lg) (18px) */
+    font-weight: 600; /* Replaced: var(--font-weight-medium) */
+    margin-top: 1.5rem; /* Replaced: var(--space-md) (24px) */
+    margin-bottom: 0.5rem; /* Replaced: var(--space-xs) (8px) */
+    color: #343a40; /* Replaced: var(--color-text-dark) */
+}
+
+/* Last Updated Date */
+.last-updated {
+    font-size: 0.875rem; /* Replaced: var(--font-size-sm) (14px) */
+    color: #6c757d; /* Replaced: var(--color-text-secondary) */
+    margin-bottom: 2rem; /* Replaced: var(--space-lg) (32px) */
+}
+
+/* Lists (For ToC and Bullet Points) */
+.policy-container ul,
+.policy-container ol {
+    margin-top: 1rem; /* Replaced: var(--space-sm) (16px) */
+    margin-bottom: 1.5rem; /* Replaced: var(--space-md) (24px) */
+    padding-left: 2rem; /* Replaced: var(--space-lg) (32px) */
+}
+
+.policy-container li {
+    margin-bottom: 0.5rem; /* Replaced: var(--space-xs) (8px) */
+}
+
+/* Links */
+.policy-container a {
+    color: #007BFF; /* Replaced: var(--color-primary) */
+    text-decoration: none;
+    transition: color 0.15s ease-in-out; /* Replaced: var(--transition-speed-fast) */
+}
+
+.policy-container a:hover {
+    color: #0056b3; /* Replaced: var(--color-primary-dark) */
+    text-decoration: underline;
+}
+
+/* Contact Box (Footer of the policy) */
+.contact-box-policy {
+    margin-top: 3rem; /* Replaced: var(--space-xl) (48px) */
+    padding: 1.5rem; /* Replaced: var(--space-md) (24px) */
+    background-color: #f8f9fa; /* Replaced: var(--color-surface-card) */
+    border: 1px solid #dee2e6; /* Replaced: var(--color-border-default) */
+    border-left: 5px solid #007BFF; /* Replaced: var(--color-primary) */
+    border-radius: 0.25rem; /* Replaced: var(--border-radius-sm) */
+}
+
+.contact-box-policy p {
+    margin: 0.5rem 0; /* Replaced: var(--space-xs) (8px) */
+}

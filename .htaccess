@@ -1,0 +1,8 @@
+
+RewriteEngine on
+
+RewriteOptions inherit
+RewriteCond %{HTTP_HOST} ^techservice\.ng$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.techservice\.ng$
+RewriteRule ^(.*)$ "https\:\/\/techservice\.ng\/$1" [R=301,L]
+
