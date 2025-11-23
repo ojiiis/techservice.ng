@@ -130,6 +130,7 @@ const allNigeriaStates = [
   "akwa-ibom", "bayelsa", "cross-river", "delta", "edo", "rivers",
   "ekiti", "lagos", "ogun", "ondo", "osun", "oyo"
 ];
+
 const nigeriaStateCities = {
   "benue": ["makurdi", "gboko", "otukpo", "katsina-ala", "vandeikya"],
   "fct-abuja": ["garki", "gwarinpa", "asokoro", "maitama", "wuse", "kubwa"],
@@ -175,4 +176,44 @@ const nigeriaStateCities = {
   "oyo": ["ibadan", "oyo-town", "ogbomoso", "saki", "egbeda"]
 };
 
-export const seo = {allNigeriaStates,nigeriaStateCities,nigeriaStateCitiesHeroContent,nigeriaStateServiceContent}
+const nigerialoglat = {
+  "abia": { "lat": 5.4527, "log": 7.5248 },
+  "adamawa": { "lat": 9.3265, "log": 12.3984 },
+  "akwa-ibom": { "lat": 5.0389, "log": 7.9095 },
+  "anambra": { "lat": 6.2100, "log": 7.0741 },
+  "bauchi": { "lat": 10.3158, "log": 9.8442 },
+  "bayelsa": { "lat": 4.9640, "log": 6.2599 },
+  "benue": { "lat": 7.1907, "log": 8.1291 },
+  "borno": { "lat": 11.8333, "log": 13.1500 },
+  "cross-river": { "lat": 5.9631, "log": 8.3348 },
+  "delta": { "lat": 5.5320, "log": 5.8987 },
+  "ebonyi": { "lat": 6.3249, "log": 8.1137 },
+  "edo": { "lat": 6.3400, "log": 5.6200 },
+  "ekiti": { "lat": 7.7180, "log": 5.3100 },
+  "enugu": { "lat": 6.4594, "log": 7.5489 },
+  "gombe": { "lat": 10.2897, "log": 11.1673 },
+  "imo": { "lat": 5.4763, "log": 7.0258 },
+  "jigawa": { "lat": 12.2280, "log": 9.5616 },
+  "kaduna": { "lat": 10.5105, "log": 7.4165 },
+  "kano": { "lat": 12.0000, "log": 8.5167 },
+  "katsina": { "lat": 12.9887, "log": 7.6000 },
+  "kebbi": { "lat": 12.4530, "log": 4.1970 },
+  "kogi": { "lat": 7.8023, "log": 6.7333 },
+  "kwara": { "lat": 8.4966, "log": 4.5421 },
+  "lagos": { "lat": 6.5244, "log": 3.3792 },
+  "nasarawa": { "lat": 8.5475, "log": 7.7118 },
+  "niger": { "lat": 9.6152, "log": 6.5478 },
+  "ogun": { "lat": 7.1608, "log": 3.3488 },
+  "ondo": { "lat": 7.2500, "log": 5.2100 },
+  "osun": { "lat": 7.5629, "log": 4.5200 },
+  "oyo": { "lat": 7.3776, "log": 3.9470 },
+  "plateau": { "lat": 9.2182, "log": 9.5170 },
+  "rivers": { "lat": 4.8242, "log": 7.0336 },
+  "sokoto": { "lat": 13.0667, "log": 5.2333 },
+  "taraba": { "lat": 8.8870, "log": 11.3590 },
+  "yobe": { "lat": 12.1876, "log": 11.7068 },
+  "zamfara": { "lat": 12.1702, "log": 6.6645 },
+  "fct-abuja": { "lat": 9.0765, "log": 7.3986 }
+}
+
+export const seo = {nigerialoglat,allNigeriaStates,nigeriaStateCities,nigeriaStateCitiesHeroContent,nigeriaStateServiceContent}
