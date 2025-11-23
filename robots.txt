@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+
+Allow: /
+
+#Sitemap: https://techservice.ng/sitemap.xml
+#Sitemap: https://blog.techservice.ng/sitemap.xml
