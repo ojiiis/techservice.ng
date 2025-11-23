@@ -69,7 +69,7 @@ app.get("/:location", (req, res) => {
   "name": "TechService.ng",
   "image": "https://techservice.ng/assets/favicon.png",
   "@id": "https://techservice.ng",
-  "url": "https://techservice.ng/",
+  "url": "https://techservice.ng/${location.toLowerCase()}/",
   "telephone": "+2349078708663",
   "email": "info@techservice.ng",
   "description": "Professional software development, IT services, web and mobile app development in ${location}.",
