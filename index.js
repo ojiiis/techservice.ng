@@ -62,7 +62,7 @@ app.get("/:location", (req, res) => {
     location = location.charAt(0).toUpperCase() + location.slice(1).toLowerCase();
      canonical = `<link rel="canonical" href="https://techservice.ng/${location.toLowerCase()}/">`;
    let loglat = seo.nigerialoglat[location.toLowerCase()];
-   let schema = `<script type="application/ld+json">
+    schema = `<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
