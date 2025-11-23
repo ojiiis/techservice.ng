@@ -30,10 +30,10 @@ let schema = `<script type="application/ld+json">
   "url": "https://techservice.ng/",
   "telephone": "+2349078708663",
   "email": "info@techservice.ng",
-  "description": "Professional software development, IT services, web and mobile app development in STATE_NAME.",
+  "description": "Professional software development, IT services, web and mobile app development in Nigeria.",
   "areaServed": {
     "@type": "AdministrativeArea",
-    "name": "STATE_NAME"
+    "name": "Nigeria"
   },
   "geo": {
     "@type": "GeoCoordinates",
