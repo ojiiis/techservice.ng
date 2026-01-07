@@ -28,7 +28,7 @@ let schema = `<script type="application/ld+json">
   "image": "https://techservice.ng/assets/favicon.png",
   "@id": "https://techservice.ng",
   "url": "https://techservice.ng/",
-  "telephone": "+2349078708663",
+  "telephone": "+2347045733867",
   "email": "info@techservice.ng",
   "description": "Professional software development, IT services, web and mobile app development in Nigeria.",
   "areaServed": {
@@ -70,7 +70,7 @@ app.get("/:location", (req, res) => {
   "image": "https://techservice.ng/assets/favicon.png",
   "@id": "https://techservice.ng",
   "url": "https://techservice.ng/${location.toLowerCase()}/",
-  "telephone": "+2349078708663",
+  "telephone": "+2347045733867",
   "email": "info@techservice.ng",
   "description": "Professional software development, IT services, web and mobile app development in ${location}.",
   "areaServed": {
