@@ -12,7 +12,9 @@ app.use((req, res, next) => {
   next();
 });
 /*   get routes  */
-
+app.get("/.well-known/acme-challenge/Ft6I3lKVsJlhqw4ICZlsraUtAX1F9sHoHFOXgT9kVaM",(req,res)=>{
+res.end("Ft6I3lKVsJlhqw4ICZlsraUtAX1F9sHoHFOXgT9kVaM.0pvuo_vp7m1pAY2XowfY7d8OLl5-hTl6QkW_YoF-m1g");
+});
 app.get("/privacy-policy",(req,res)=>{
        res.end(ojs.get("web/privacy-policy.html"));
 });
