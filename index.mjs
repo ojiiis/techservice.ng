@@ -12,8 +12,8 @@ app.use((req, res, next) => {
   next();
 });
 /*   get routes  */
-app.get("/.well-known/acme-challenge/Ft6I3lKVsJlhqw4ICZlsraUtAX1F9sHoHFOXgT9kVaM",(req,res)=>{
-res.end("Ft6I3lKVsJlhqw4ICZlsraUtAX1F9sHoHFOXgT9kVaM.0pvuo_vp7m1pAY2XowfY7d8OLl5-hTl6QkW_YoF-m1g");
+app.get("/.well-known/acme-challenge/b9X_jqJDg2eCCCOkG1kzMWudr9sdWyYitU9mksDB4JU",(req,res)=>{
+res.end("b9X_jqJDg2eCCCOkG1kzMWudr9sdWyYitU9mksDB4JU.GuKmeagYoksnjYlQkZxceSZ8mu6vh9NKLkrDf8WdeE8");
 });
 app.get("/:state/map",(req,res)=>{
   let state = req.params.state;
