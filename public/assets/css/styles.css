@@ -1214,3 +1214,206 @@ body.modal-open {
 .contact-box-policy p {
     margin: 0.5rem 0; /* Replaced: var(--space-xs) (8px) */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   TechService Products Dropdown Navigation CSS
+   Compatible with Fixed Header (max-height: 100px)
+   ========================================================================== */
+
+/* 1. Parent Item Anchor */
+
+.nav-item.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%; /* Keeps parent within 100px header bounds */
+}
+
+/* 2. Main "Products" Toggle Button */
+.nav-item.dropdown .dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0.85rem;
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* Optional CSS Dropdown Arrow */
+.nav-item.dropdown .dropdown-toggle::after {
+  content: "";
+  display: inline-block;
+  width: 0.4em;
+  height: 0.4em;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform 0.2s ease;
+}
+
+.nav-item.dropdown:hover .dropdown-toggle::after,
+.nav-item.dropdown.show .dropdown-toggle::after {
+  transform: rotate(-135deg) translateY(-2px);
+}
+
+/* 3. Floating Dropdown Container */
+.nav-item.dropdown .dropdown-menu {
+  position: absolute;
+  display:flex;
+  flex-direction: column;
+  gap:10px;
+  top: 100%; /* Positions menu directly below the 100px header */
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  min-width: 360px; /* Prevents text squeezing */
+  max-width: 420px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.85rem;
+  padding: 0.65rem 0;
+  margin: 0;
+  box-shadow: 0 16px 35px -8px rgba(15, 23, 42, 0.18), 0 4px 12px -2px rgba(0, 0, 0, 0.05);
+  list-style: none;
+  z-index: 1050; /* Ensures visibility over page content */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+}
+
+/* Hover & Active Display State */
+.nav-item.dropdown:hover .dropdown-menu,
+.nav-item.dropdown.show .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* 4. Sub-menu Links (Generous Padding & Spacing) */
+.nav-item.dropdown .dropdown-item {
+  display: block;
+  padding: 0.85rem 1.35rem; /* Generous touch target & room between submenus */
+  color: #1e293b;
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease, padding-left 0.15s ease;
+  border-left: 3px solid transparent; /* Accent highlight line on hover */
+}
+
+.nav-item.dropdown .dropdown-item:hover,
+.nav-item.dropdown .dropdown-item:focus {
+  background-color: #f8fafc;
+  border-left-color: #2563eb;
+  padding-left: 1.5rem; /* Subtle rightward push on focus */
+}
+
+/* Sub-menu Item Titles */
+.nav-item.dropdown .dropdown-item strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #0f172a;
+}
+
+.nav-item.dropdown .dropdown-item:hover strong {
+  color: #2563eb;
+}
+
+/* Sub-menu Item Subtext */
+.nav-item.dropdown .dropdown-item .text-muted {
+  display: block;
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+  line-height: 1.4;
+  white-space: normal;
+}
+
+/* Divider Line */
+.nav-item.dropdown .dropdown-divider {
+  height: 1px;
+  margin: 0.5rem 0;
+  background-color: #e2e8f0;
+  border: 0;
+}
+
+/* Highlighted Accent Link (Full Business OS) */
+.nav-item.dropdown .dropdown-item.text-primary strong {
+  color: #2563eb;
+}
+
+
+
+/* Hover & Active Display State */
+.nav-item.dropdown.mobile:hover .dropdown-menu,
+.nav-item.dropdown.mobile.show .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+   z-index: 1000000;
+    position: fixed;
+    display: none;
+}
+
+
+
+/* 5. Mobile Responsiveness */
+@media (max-width: 991px) {
+  .nav-item.dropdown {
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-item.dropdown .dropdown-menu {
+    position: static;
+    transform: none !important;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    border: none;
+    background: #f8fafc;
+    padding: 0.5rem 0;
+    margin-top: 0.25rem;
+    display: none;
+  }
+
+  .nav-item.dropdown.show .dropdown-menu {
+    display: block;
+  }
+
+  .nav-item.dropdown .dropdown-item {
+    padding: 0.75rem 1rem;
+    border-left: none;
+  }
+}
+
+li.has-submenu ul{
+    display: none;
+}
+li.has-submenu:hover >  ul{
+ display: block;
+}
