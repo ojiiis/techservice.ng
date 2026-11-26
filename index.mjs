@@ -65,7 +65,6 @@ app.get("/", (req, res) => {
 });
 
 app.get("/:location", (req, res) => { 
- 
     let location = (seo.allNigeriaStates.includes(req.params.location))?req.params.location:"Nigeria";
     let cities = seo.nigeriaStateCities[location] || [];
     let hero = seo.nigeriaStateCitiesHeroContent[location] || [];
