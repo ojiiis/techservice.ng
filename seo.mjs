@@ -1,126 +1,48 @@
-const nigeriaStateCitiesHeroContent = {
-  "benue": "Professional tech and digital services in Benue State — serving Makurdi, Gboko, Otukpo and surrounding communities with fast, reliable and affordable solutions.",
-  
-  "fct-abuja": "Premium tech services in Abuja — trusted by residents in Gwarinpa, Wuse, Maitama, Lugbe and Central Area for fast, modern and secure digital solutions.",
-  
-  "kogi": "Your trusted digital service provider in Kogi State — powering businesses and individuals in Lokoja, Okene, Kabba and beyond.",
-  
-  "kwara": "Top-quality tech services in Kwara — delivering innovative and affordable digital solutions across Ilorin, Offa, Omu-Aran and the entire state.",
-  
-  "nasarawa": "Reliable technology and digital services in Nasarawa State — proudly supporting clients in Lafia, Keffi, Akwanga and neighboring areas.",
-  
-  "niger": "Affordable and efficient tech services in Niger State — serving Minna, Suleja, Bida and other fast-growing communities.",
-  
-  "plateau": "Technology solutions built for Plateau State — trusted in Jos, Bukuru, Barkin Ladi and surrounding cities for speed and reliability.",
-  
-  "adamawa": "Leading tech service provider in Adamawa — supporting clients in Yola, Mubi, Girei and the entire northeastern region.",
-  
-  "bauchi": "Fast, secure and high-quality tech services across Bauchi State — serving Bauchi City, Azare, Misau and more.",
-  
-  "borno": "Smart and dependable digital services in Borno State — available in Maiduguri, Bama, Biu and nearby communities.",
-  
-  "gombe": "Top-rated tech solutions for Gombe State — trusted across Gombe City, Kumo, Billiri and neighboring areas.",
-  
-  "taraba": "Complete digital and tech services for Taraba State — serving Jalingo, Wukari, Bali and surrounding towns.",
-  
-  "yobe": "Reliable and affordable tech services across Yobe — supporting Damaturu, Potiskum, Gashua and more.",
-  
-  "kaduna": "Trusted digital services in Kaduna State — empowering businesses and homes in Kaduna City, Zaria, Kafanchan and beyond.",
-  
-  "kano": "High-demand technology solutions in Kano State — serving Kano City, Fagge, Gwale, Nasarawa LGA and all major areas.",
-  
-  "katsina": "Professional tech support and digital services across Katsina — available in Katsina City, Funtua, Daura and nearby regions.",
-  
-  "kebbi": "Smart and dependable tech services in Kebbi State — serving Birnin Kebbi, Argungu, Yauri and surrounding towns.",
-  
-  "sokoto": "Modern, reliable tech services across Sokoto State — trusted by clients in Sokoto City, Wamako, Tambuwal and more.",
-  
-  "jigawa": "Affordable tech and digital solutions for Jigawa — serving Dutse, Hadejia, Kazaure and neighboring communities.",
-  
-  "zamfara": "Professional tech services in Zamfara State — available in Gusau, Kaura Namoda, Talata Mafara and the entire region.",
-  
-  "abia": "High-quality tech solutions for Abia State — serving Aba, Umuahia, Ohafia and other fast-growing cities.",
-  
-  "anambra": "Reliable and fast tech services in Anambra — supporting clients in Awka, Onitsha, Nnewi and across the state.",
-  
-  "ebonyi": "Trusted digital and technology services in Ebonyi State — available in Abakaliki, Afikpo, Onueke and neighboring areas.",
-  
-  "enugu": "Premium digital services in Enugu State — powering businesses and individuals in Enugu City, Nsukka, Agbani and beyond.",
-  
-  "imo": "Cutting-edge tech solutions for Imo State — serving Owerri, Orlu, Okigwe and nearby communities.",
-  
-  "akwa-ibom": "Modern and affordable digital services in Akwa Ibom — trusted across Uyo, Eket, Ikot Ekpene and surrounding towns.",
-  
-  "bayelsa": "Professional tech services tailored for Bayelsa — available in Yenagoa, Ogbia, Sagbama and nearby areas.",
-  
-  "cross-river": "Smart digital solutions for Cross River State — supporting Calabar, Ikom, Ogoja and more.",
-  
-  "delta": "Top-tier tech services in Delta State — powering innovation in Asaba, Warri, Ughelli and surrounding cities.",
-  
-  "edo": "Fast and secure tech services in Edo State — available across Benin City, Ekpoma, Auchi and neighboring regions.",
-  
-  "rivers": "Premium digital service delivery in Rivers State — trusted in Port Harcourt, Obio-Akpor, Bonny and the entire Niger Delta.",
-  
-  "ekiti": "Affordable and reliable tech solutions across Ekiti — serving Ado-Ekiti, Ikere-Ekiti, Ijero-Ekiti and more.",
-  
-  "lagos": "Leading tech and digital services in Lagos State — available across Ikeja, Lekki, Surulere, Ikorodu and every major district.",
-  
-  "ogun": "Smart technology solutions for Ogun State — serving Abeokuta, Ijebu-Ode, Sagamu and nearby towns.",
-  
-  "ondo": "Trusted tech services in Ondo State — available in Akure, Ondo Town, Okitipupa and more.",
-  
-  "osun": "High-quality digital services across Osun — serving Osogbo, Ile-Ife, Ilesa and surrounding communities.",
-  
-  "oyo": "Premium and affordable tech services in Oyo State — supporting Ibadan, Ogbomoso, Oyo Town and more."
+/**
+ * TechService.ng – State-level SEO data
+ * Unique hero, local expertise copy, display names, cities & geo for every state.
+ * Focus: software development, web/mobile apps, cloud, IT strategy & digital transformation.
+ */
+
+const stateDisplayNames = {
+  "benue": "Benue",
+  "fct-abuja": "FCT Abuja",
+  "kogi": "Kogi",
+  "kwara": "Kwara",
+  "nasarawa": "Nasarawa",
+  "niger": "Niger",
+  "plateau": "Plateau",
+  "adamawa": "Adamawa",
+  "bauchi": "Bauchi",
+  "borno": "Borno",
+  "gombe": "Gombe",
+  "taraba": "Taraba",
+  "yobe": "Yobe",
+  "kaduna": "Kaduna",
+  "kano": "Kano",
+  "katsina": "Katsina",
+  "kebbi": "Kebbi",
+  "sokoto": "Sokoto",
+  "jigawa": "Jigawa",
+  "zamfara": "Zamfara",
+  "abia": "Abia",
+  "anambra": "Anambra",
+  "ebonyi": "Ebonyi",
+  "enugu": "Enugu",
+  "imo": "Imo",
+  "akwa-ibom": "Akwa Ibom",
+  "bayelsa": "Bayelsa",
+  "cross-river": "Cross River",
+  "delta": "Delta",
+  "edo": "Edo",
+  "rivers": "Rivers",
+  "ekiti": "Ekiti",
+  "lagos": "Lagos",
+  "ogun": "Ogun",
+  "ondo": "Ondo",
+  "osun": "Osun",
+  "oyo": "Oyo"
 };
-
-
-const nigeriaStateServiceContent = {
-  "benue": "Reliable tech repairs, installations, and IT support across Benue — serving Makurdi, Gboko, Otukpo, and surrounding communities.",
-  "fct-abuja": "Professional device repair, CCTV installation, and home tech services across Abuja, including Gwarinpa, Wuse, Maitama, and Kubwa.",
-  "kogi": "Fast and trusted tech repair and installation services available across Kogi — from Lokoja to Okene and Ankpa.",
-  "kwara": "Expert IT support, gadget repairs, and smart home installations across Kwara including Ilorin, Offa, and Omu-Aran.",
-  "nasarawa": "Affordable tech repairs and digital setup services across Nasarawa, serving Lafia, Keffi, Akwanga and Karu.",
-  "niger": "Complete home and business tech services across Niger State — Minna, Suleja, Bida, and Kontagora.",
-  "plateau": "Reliable gadget repair, CCTV installation and home network setup across Plateau — covering Jos, Barkin Ladi, and Shendam.",
-  
-  "adamawa": "Professional tech repair and installation services across Adamawa — Yola, Mubi, Jimeta, and Ganye.",
-  "bauchi": "Quality device repair, CCTV setup, and inverter services across Bauchi including Azare, Misau, and Jama’are.",
-  "borno": "Trusted IT support, phone & laptop repair, and home tech installations across Borno — Maiduguri, Biu, and Monguno.",
-  "gombe": "Fast and dependable tech services across Gombe State — Gombe city, Kaltungo, and Dukku.",
-  "taraba": "Reliable gadget repair and digital installation services across Taraba — Jalingo, Wukari, and Bali.",
-  "yobe": "Professional device repairs, CCTV installation, and IT support across Yobe — Damaturu, Potiskum, and Gashua.",
-  
-  "kaduna": "Expert phone & laptop repair, CCTV and inverter services across Kaduna — Kaduna city, Zaria, and Kafanchan.",
-  "kano": "Top-tier tech services across Kano — repairs, installation and IT support available in Kano city, Gwale, and Bichi.",
-  "katsina": "Affordable and quick digital repair & installation services across Katsina — Funtua, Daura, and Katsina metro.",
-  "kebbi": "Professional tech support across Kebbi — Birnin Kebbi, Argungu, Zuru, Yauri and Jega.",
-  "sokoto": "Reliable home and business tech services across Sokoto — Sokoto city, Tambuwal, and Wurno.",
-  "jigawa": "Trusted gadget repair and installation services across Jigawa — Dutse, Hadejia, and Gumel.",
-  "zamfara": "Tech repair and installation services across Zamfara — Gusau, Kaura Namoda, and Talata Mafara.",
-  
-  "abia": "Fast and dependable tech repair & setup services across Abia — Umuahia, Aba, and Ohafia.",
-  "anambra": "Professional IT and device services across Anambra — Awka, Onitsha, Nnewi, and environs.",
-  "ebonyi": "Reliable tech repair, CCTV and inverter installations across Ebonyi — Abakaliki, Afikpo, and Onueke.",
-  "enugu": "Trusted gadget repairs and digital installation services across Enugu — Enugu city, Nsukka, and Udi.",
-  "imo": "Complete home & business tech services across Imo — Owerri, Orlu, and Okigwe.",
-  
-  "akwa-ibom": "Top-quality device repair, CCTV setup and IT support across Akwa Ibom — Uyo, Eket, and Ikot Ekpene.",
-  "bayelsa": "Professional tech services across Bayelsa — Yenagoa, Sagbama, and Ogbia.",
-  "cross-river": "Reliable repair and installation services across Cross River — Calabar, Ikom, and Ogoja.",
-  "delta": "Trusted tech support and installation services across Delta — Warri, Asaba, Sapele, and Ughelli.",
-  "edo": "Expert phone & laptop repairs, CCTV installation, and IT services across Edo — Benin City, Auchi, and Ekpoma.",
-  "rivers": "Top-rated tech repair and installation services across Rivers — Port Harcourt, Bonny, and Obio-Akpor.",
-  
-  "ekiti": "Reliable gadget repair, smart home setup and IT support across Ekiti — Ado-Ekiti, Ikere, Ijero, and Emure.",
-  "lagos": "Fast, professional repair and tech installation services across Lagos — Ikeja, Yaba, Lekki, Surulere, and Ikorodu.",
-  "ogun": "Quality tech repairs and digital installations across Ogun — Abeokuta, Ijebu-Ode, and Ota.",
-  "ondo": "Trusted home and business tech services across Ondo — Akure, Owo, and Ondo town.",
-  "osun": "Professional device repair and installation services across Osun — Osogbo, Ile-Ife, and Ilesa.",
-  "oyo": "Reliable tech support and gadget repairs across Oyo — Ibadan, Ogbomoso, and Oyo town."
-};
-
-
 
 const allNigeriaStates = [
   "benue", "fct-abuja", "kogi", "kwara", "nasarawa", "niger", "plateau",
@@ -138,36 +60,31 @@ const nigeriaStateCities = {
   "kwara": ["ilorin", "offa", "jeba", "oke-oyi", "omupo"],
   "nasarawa": ["lafia", "keffi", "akwanga", "nasarawa", "karu"],
   "niger": ["minna", "suleja", "bida", "kontagora", "new-bussa"],
-  "plateau": ["jos", "barkin-ladi", "pankshin", "shendam", "langtang"],
-  
-  "adamawa": ["yola", "mubi", "numan", "girei", "ganye"],
-  "bauchi": ["bauchi", "azare", "misau", "jamaare", "darazo"],
-  "borno": ["maiduguri", "bama", "ngala", "biu", "gwoza"],
-  "gombe": ["gombe", "kaltungo", "dukku", "funakaye", "deba"],
-  "taraba": ["jalingo", "wukari", "bali", "sardauna", "karim-lamido"],
-  "yobe": ["damaturu", "nguru", "potiskum", "gashua", "buni-yadi"],
-
-  "kaduna": ["kaduna", "zaria", "kafanchan", "kajuru", "birnin-gwari"],
-  "kano": ["kano", "wudil", "gwale", "danke", "bichi"],
+  "plateau": ["jos", "bukuru", "barkin-ladi", "shendam", "pankshin"],
+  "adamawa": ["yola", "mubi", "girei", "jimeta", "ganye"],
+  "bauchi": ["bauchi", "azare", "misau", "jamaare", "dass"],
+  "borno": ["maiduguri", "bama", "biu", "monguno", "gwoza"],
+  "gombe": ["gombe", "kumo", "billiri", "kaltungo", "dukku"],
+  "taraba": ["jalingo", "wukari", "bali", "takum", "gembu"],
+  "yobe": ["damaturu", "potiskum", "gashua", "nguru", "geidam"],
+  "kaduna": ["kaduna", "zaria", "kafanchan", "sabon-gari", "igabi"],
+  "kano": ["kano", "fagge", "gwale", "danke", "bichi"],
   "katsina": ["katsina", "daura", "funtua", "malumfashi", "charanchi"],
   "kebbi": ["birnin-kebbi", "argungu", "zuru", "yauri", "jega"],
   "sokoto": ["sokoto", "tambuwal", "wurno", "binji", "goronyo"],
   "jigawa": ["dutse", "hadejia", "gumel", "birnin-kudu", "kazaure"],
   "zamfara": ["gusau", "kaura-namoda", "bukkuyum", "ankpa", "maru"],
-
   "abia": ["umuahia", "aba", "ohafia", "arochukwu", "isiala-ngwa"],
   "anambra": ["awka", "onitsha", "nnewi", "ihiala", "okpoko"],
   "ebonyi": ["abakaliki", "afikpo", "ikwo", "ishielu", "ohaozara"],
   "enugu": ["enugu", "nsukka", "agy", "oasmg", "ugwogo"],
   "imo": ["owerri", "orlu", "okigwe", "mgbidi", "ohaji"],
-
   "akwa-ibom": ["uyo", "ikot-ekpene", "eket", "orum", "abak"],
   "bayelsa": ["yenagoa", "amassoma", "kaiama", "otueke", "nembe"],
   "cross-river": ["calabar", "uyanga", "ikot-ena", "ikom", "obudu"],
   "delta": ["asaba", "warri", "ugbo", "sapele", "agbor"],
   "edo": ["benin-city", "ekpoma", "auch", "uba", "igarr"],
   "rivers": ["port-harcourt", "obio-akpor", "eleme", "degema", "bonny"],
-
   "ekiti": ["ado-ekiti", "ikere-ekiti", "ijero-ekiti", "emure", "erinmope"],
   "lagos": ["ikeja", "lekki", "victoria-island", "surulere", "ikoyi", "ajah"],
   "ogun": ["abeokuta", "sango-otta", "ijebu-ode", "sagamu", "ogijo"],
@@ -214,6 +131,134 @@ const nigerialoglat = {
   "yobe": { "lat": 12.1876, "log": 11.7068 },
   "zamfara": { "lat": 12.1702, "log": 6.6645 },
   "fct-abuja": { "lat": 9.0765, "log": 7.3986 }
-}
+};
 
-export const seo = {nigerialoglat,allNigeriaStates,nigeriaStateCities,nigeriaStateCitiesHeroContent,nigeriaStateServiceContent}
+const nigeriaStateCitiesHeroContent = {
+  "benue": "From Makurdi’s growing agribusiness hubs to Gboko and Otukpo, we build custom software, farm-management platforms and reliable IT systems that help Benue businesses sell more and operate smarter.",
+  "fct-abuja": "Serving Gwarinpa, Wuse, Maitama, Asokoro, Kubwa and the wider FCT with enterprise software, government-grade web platforms, secure cloud systems and digital transformation projects trusted by startups and public-sector teams.",
+  "kogi": "Powering Lokoja, Okene, Kabba and Idah with custom web apps, logistics software and affordable IT infrastructure that keep trade and manufacturing moving across the confluence state.",
+  "kwara": "Ilorin, Offa and Omu-Aran businesses rely on us for modern web platforms, school and hospital management systems, and cloud solutions that cut costs and improve service delivery statewide.",
+  "nasarawa": "In Lafia, Keffi, Akwanga and Karu we deliver software development, e-commerce sites and secure IT networks tailored to the state’s fast-growing real-estate, education and agribusiness sectors.",
+  "niger": "Minna, Suleja and Bida companies choose TechService for custom software, POS and inventory systems, and cloud migration that support the state’s commercial and agricultural growth.",
+  "plateau": "Jos, Bukuru and Barkin Ladi organisations get purpose-built software, tourism and hospitality platforms, and resilient IT infrastructure designed for the unique needs of Plateau’s highland economy.",
+  "adamawa": "Yola, Mubi and Jimeta businesses partner with us for mobile apps, financial and cooperative management software, and secure networks that strengthen commerce across Adamawa.",
+  "bauchi": "Bauchi City, Azare and Misau get practical software development, e-learning platforms and IT support that help schools, clinics and traders digitise operations affordably.",
+  "borno": "In Maiduguri, Biu and surrounding communities we build resilient software, communication tools and cloud systems that support recovery, education and local enterprise.",
+  "gombe": "Gombe City, Kumo and Billiri organisations use our custom web and mobile solutions, payment systems and IT strategy services to scale faster in the North-East.",
+  "taraba": "Jalingo, Wukari and Bali businesses rely on TechService for agricultural software, tourism platforms and reliable IT infrastructure across Taraba’s diverse economy.",
+  "yobe": "Damaturu, Potiskum and Gashua teams get practical digital tools, school management systems and secure connectivity solutions built for Yobe’s growth priorities.",
+  "kaduna": "From Kaduna metropolis to Zaria and Kafanchan we deliver enterprise software, manufacturing and logistics platforms, and cloud/DevOps services for one of Nigeria’s industrial powerhouses.",
+  "kano": "Kano’s commercial heart — including Fagge, Gwale and the wider metro — gets high-volume e-commerce platforms, wholesale management systems, mobile apps and robust IT infrastructure from TechService.",
+  "katsina": "Katsina City, Funtua and Daura businesses work with us on custom software, agricultural value-chain platforms and affordable digital transformation that fits local market realities.",
+  "kebbi": "Birnin Kebbi, Argungu and Yauri organisations use our software, rice and agribusiness platforms, and reliable networks to modernise trade along the riverine economy.",
+  "sokoto": "Sokoto City, Tambuwal and surrounding towns get practical web and mobile solutions, cooperative and trading platforms, and IT support designed for the North-West commercial corridor.",
+  "jigawa": "Dutse, Hadejia and Gumel businesses partner with TechService for software development, e-government and education platforms, and cost-effective cloud services.",
+  "zamfara": "Gusau, Kaura Namoda and Talata Mafara organisations receive custom digital tools, mining and trade support systems, and secure IT infrastructure built for local conditions.",
+  "abia": "Aba’s manufacturing and trading energy plus Umuahia and Ohafia get high-performance e-commerce, inventory and logistics software, plus modern web and mobile apps from our team.",
+  "anambra": "Onitsha, Nnewi and Awka — centres of commerce and industry — rely on us for scalable software, market and warehouse systems, fintech integrations and enterprise IT solutions.",
+  "ebonyi": "Abakaliki, Afikpo and surrounding communities get practical software for agriculture, education and local government, plus reliable web and cloud services.",
+  "enugu": "Enugu City and Nsukka organisations choose TechService for university and education platforms, coal and energy sector software, and polished web & mobile experiences.",
+  "imo": "Owerri, Orlu and Okigwe businesses partner with us for hospitality and real-estate platforms, custom software and digital marketing-ready websites that convert.",
+  "akwa-ibom": "Uyo, Eket and Ikot Ekpene companies get oil-and-gas supporting software, tourism platforms, fintech solutions and secure cloud infrastructure from TechService.",
+  "bayelsa": "Yenagoa and surrounding communities receive custom software for energy, environment and local enterprise, plus reliable web and mobile development tailored to Bayelsa.",
+  "cross-river": "Calabar, Ikom and Obudu organisations use our tourism and hospitality platforms, e-government tools and modern web applications that showcase Cross River’s strengths.",
+  "delta": "Warri, Asaba, Sapele and Ughelli businesses depend on us for oil-service software, logistics platforms, e-commerce and enterprise IT systems built for the Delta economy.",
+  "edo": "Benin City, Auchi and Ekpoma get custom software, cultural and tourism platforms, education systems and robust IT infrastructure from a team that understands Edo.",
+  "rivers": "Port Harcourt, Obio-Akpor, Bonny and Eleme organisations trust TechService for energy-sector software, complex web platforms, cloud architecture and digital transformation.",
+  "ekiti": "Ado-Ekiti, Ikere and Ijero businesses and institutions work with us on education and government software, modern websites and affordable cloud solutions.",
+  "lagos": "Ikeja, Lekki, Victoria Island, Surulere, Yaba and beyond — Lagos’s densest tech market gets enterprise software, fintech-grade apps, high-traffic web platforms and full DevOps from TechService.",
+  "ogun": "Abeokuta, Sango-Ota, Ijebu-Ode and Sagamu industrial and commercial hubs receive manufacturing software, logistics systems, e-commerce and scalable IT infrastructure.",
+  "ondo": "Akure, Ondo town and Owo organisations partner with us for agricultural and processing software, education platforms and modern web & mobile development.",
+  "osun": "Osogbo, Ile-Ife and Ilesa businesses and cultural institutions get custom software, tourism platforms and reliable digital infrastructure from TechService.",
+  "oyo": "Ibadan, Ogbomoso and Oyo town companies rely on us for large-scale web platforms, education and publishing systems, e-commerce and enterprise software development."
+};
+
+const nigeriaStateLocalContent = {
+  "benue": "Benue is Nigeria’s food basket. We help farms, agro-processors, cooperatives and traders in Makurdi, Gboko and Otukpo move from manual records to real-time inventory, pricing and distribution software. Our teams also build school and clinic management systems used across the state, so public and private institutions can deliver better services with less paperwork.",
+  "fct-abuja": "As the federal capital, Abuja demands secure, scalable and policy-aware systems. We design and deliver software for ministries, agencies, fintechs and corporate HQs in Gwarinpa, Maitama, Wuse and Central Business District. From citizen-facing portals to internal workflow automation and cloud migrations that meet compliance requirements, TechService is built for FCT standards.",
+  "kogi": "Sitting at the confluence of the Niger and Benue, Kogi is a logistics and trade crossroads. We create custom logistics, fleet and warehouse software for companies in Lokoja and Okene, plus affordable web and POS solutions for SMEs in Kabba and Idah. Our goal is practical digitisation that works on the connectivity available across the state.",
+  "kwara": "Ilorin’s growing education, healthcare and light-manufacturing sectors need reliable digital tools. We build school information systems, hospital management platforms and e-commerce sites for Kwara businesses, and help organisations in Offa and Omu-Aran move core processes to the cloud without breaking the bank.",
+  "nasarawa": "Proximity to Abuja has accelerated real-estate, education and agribusiness in Lafia, Keffi and Karu. We deliver property management software, campus platforms and farm-to-market systems that help Nasarawa organisations compete. Secure networks and cloud setups keep data safe even as teams grow.",
+  "niger": "Minna and Suleja sit on major commercial corridors. We provide inventory and sales software for traders, custom solutions for local manufacturers, and IT infrastructure that supports both government and private clients across Niger State. Our approach prioritises uptime and local support.",
+  "plateau": "Jos remains a hub for education, tourism and services. We build hospitality booking platforms, school and research systems, and secure networks for organisations across the plateau. Our solutions account for the state’s climate and connectivity patterns so systems stay available year-round.",
+  "adamawa": "Yola and Mubi are commercial centres for the North-East. We develop cooperative and microfinance software, mobile apps for traders, and education platforms used by institutions across Adamawa. Resilience and offline-capable features are built in where network conditions demand it.",
+  "bauchi": "Bauchi’s schools, clinics and trading networks benefit from practical digitisation. We deliver school management systems, simple clinic records software and e-commerce tools that work for local businesses in Bauchi City, Azare and Misau — always focused on ease of use and local training.",
+  "borno": "Supporting recovery and growth in Maiduguri and beyond requires systems that are robust and easy to maintain. We build communication platforms, education software and business tools designed for Borno’s operating environment, with strong emphasis on security and continuity.",
+  "gombe": "Gombe’s central location makes it a natural hub for trade and services. We create custom software for wholesalers, transport operators and public institutions, plus modern websites and payment integrations that help Gombe businesses reach customers statewide and beyond.",
+  "taraba": "From agriculture in the lowlands to tourism around Gembu, Taraba’s economy is diverse. We build farm management and market-linkage software, tourism platforms and reliable IT infrastructure for organisations in Jalingo, Wukari and across the state.",
+  "yobe": "Damaturu and Potiskum businesses and institutions need digital tools that are affordable and dependable. We deliver school systems, trading platforms and basic cloud services with local training so teams in Yobe can run and maintain their own solutions.",
+  "kaduna": "As a major industrial and education centre, Kaduna requires enterprise-grade software. We build manufacturing and supply-chain systems, university platforms and secure cloud architectures for clients from Kaduna metropolis to Zaria and Kafanchan. DevOps and continuous delivery are part of every serious engagement.",
+  "kano": "Kano’s markets move at high volume. We specialise in e-commerce, wholesale and inventory platforms that handle real-scale traffic, plus mobile apps and payment integrations trusted by traders and manufacturers across the metropolis. Our infrastructure is designed for peak market days.",
+  "katsina": "Agriculture and trade drive Katsina’s economy. We develop value-chain software for farmers and aggregators, cooperative management systems and practical web solutions for businesses in Katsina City, Funtua and Daura — always with local usability in mind.",
+  "kebbi": "Rice, fishing and cross-border trade shape Kebbi’s digital needs. We build agribusiness and inventory platforms, cooperative tools and reliable networks for organisations in Birnin Kebbi, Argungu and Yauri so data and money move as smoothly as goods.",
+  "sokoto": "Sokoto’s commercial and administrative roles demand solid systems. We deliver trading and cooperative software, government process automation and modern websites for institutions and businesses across Sokoto City and the wider state.",
+  "jigawa": "Dutse and Hadejia organisations are digitising education, agriculture and local government. We provide affordable school platforms, farm software and e-government tools, plus cloud services that keep costs predictable for Jigawa clients.",
+  "zamfara": "Mining, agriculture and trade define much of Zamfara’s economy. We build practical software for local enterprises, secure networks and web platforms that help organisations in Gusau and surrounding towns operate more efficiently and transparently.",
+  "abia": "Aba is one of Nigeria’s manufacturing powerhouses. We build production, inventory and multi-channel sales software for factories and traders, plus high-converting e-commerce and logistics platforms that connect Abia businesses to customers nationwide.",
+  "anambra": "Onitsha and Nnewi set the pace for commerce and light industry in the South-East. We deliver scalable market and warehouse systems, fintech integrations, custom ERP-style software and polished web experiences for Anambra’s most ambitious companies.",
+  "ebonyi": "Abakaliki and Afikpo organisations need digital tools that match their growth. We create agricultural and quarry-support software, education platforms and modern websites, with training so Ebonyi teams can own their systems long-term.",
+  "enugu": "Enugu’s mix of education, services and industry benefits from well-designed software. We build university and research platforms, energy-sector tools and customer-facing web applications that reflect the city’s professional standards.",
+  "imo": "Owerri’s hospitality, real-estate and education sectors are expanding. We deliver booking and property platforms, school systems and marketing-ready websites that help Imo businesses attract and retain customers.",
+  "akwa-ibom": "Uyo and the coastal economy combine energy, tourism and commerce. We build supporting software for service companies, tourism and hospitality platforms, and secure cloud environments that meet the expectations of Akwa Ibom’s corporate and public clients.",
+  "bayelsa": "Energy, environment and local enterprise shape Bayelsa’s digital agenda. We develop custom software for operators and SMEs, environmental and community platforms, and reliable web systems centred on Yenagoa and surrounding areas.",
+  "cross-river": "Calabar’s tourism and Cross River’s wider cultural assets need strong digital presence. We create booking and experience platforms, e-government tools and modern websites that help the state attract visitors and serve residents better.",
+  "delta": "Warri, Asaba and the industrial corridors of Delta State require robust, high-availability systems. We build oil-service and logistics software, enterprise platforms and cloud architectures that keep Delta businesses competitive.",
+  "edo": "Benin City’s commercial and cultural weight, plus growing education hubs, need quality software. We deliver custom business platforms, cultural and tourism systems, and IT infrastructure for organisations across Edo State.",
+  "rivers": "Port Harcourt is a critical energy and commercial hub. We design and implement complex software for upstream and service companies, high-traffic web platforms, and secure cloud/DevOps environments trusted by Rivers State organisations.",
+  "ekiti": "Education and public service are central to Ekiti. We build school and government platforms, modern institutional websites and affordable cloud solutions that help Ado-Ekiti and surrounding towns deliver better digital services.",
+  "lagos": "Lagos is Nigeria’s largest tech and commercial market. We deliver enterprise software, fintech and high-scale web platforms, mobile apps and full cloud/DevOps for startups and corporates across Ikeja, Lekki, VI, Yaba and the wider metro. Speed, security and scalability are non-negotiable.",
+  "ogun": "Ogun’s industrial clusters in Ota, Agbara and beyond need manufacturing, logistics and compliance software. We build those systems plus e-commerce and corporate platforms for businesses in Abeokuta, Ijebu-Ode and Sagamu that sell into Lagos and nationwide.",
+  "ondo": "Akure and Ondo’s agricultural and educational institutions benefit from purpose-built software. We create processing and supply-chain tools, campus platforms and modern web applications that support growth across the state.",
+  "osun": "Osogbo and Ile-Ife combine culture, education and commerce. We build tourism and cultural platforms, education systems and business software that help Osun organisations reach wider audiences while staying rooted locally.",
+  "oyo": "Ibadan remains one of Nigeria’s most important commercial and educational centres. We deliver large-scale web and publishing platforms, education and research systems, e-commerce and enterprise software for organisations across Ibadan, Ogbomoso and Oyo town."
+};
+
+const nigeriaStateMetaFocus = {
+  "benue": "custom software for agribusiness, farm management systems & IT solutions",
+  "fct-abuja": "enterprise software, government platforms, cloud & digital transformation",
+  "kogi": "logistics software, web apps & affordable IT infrastructure",
+  "kwara": "school & hospital systems, e-commerce and cloud solutions",
+  "nasarawa": "property, education & agribusiness software near Abuja",
+  "niger": "inventory, sales software and IT support for Minna & Suleja",
+  "plateau": "hospitality platforms, education systems & resilient IT",
+  "adamawa": "cooperative software, mobile apps & secure networks",
+  "bauchi": "school systems, clinic software & practical digitisation",
+  "borno": "resilient software, education tools & secure systems",
+  "gombe": "trading software, payment systems & digital growth tools",
+  "taraba": "agricultural software, tourism platforms & IT infrastructure",
+  "yobe": "school systems, trading platforms & affordable cloud",
+  "kaduna": "manufacturing software, university platforms & DevOps",
+  "kano": "e-commerce, wholesale systems & high-volume platforms",
+  "katsina": "agribusiness software, cooperatives & digital tools",
+  "kebbi": "rice & agribusiness platforms, cooperatives & networks",
+  "sokoto": "trading software, cooperative systems & web platforms",
+  "jigawa": "education platforms, farm software & e-government tools",
+  "zamfara": "enterprise tools, secure networks & local software",
+  "abia": "manufacturing software, e-commerce & logistics platforms",
+  "anambra": "market systems, warehouse software & fintech integrations",
+  "ebonyi": "agricultural software, education platforms & websites",
+  "enugu": "university platforms, energy software & web applications",
+  "imo": "hospitality platforms, property systems & conversion websites",
+  "akwa-ibom": "energy-sector software, tourism platforms & secure cloud",
+  "bayelsa": "energy & SME software, community platforms & web systems",
+  "cross-river": "tourism platforms, e-government & modern web apps",
+  "delta": "oil-service software, logistics platforms & enterprise IT",
+  "edo": "business platforms, cultural systems & IT infrastructure",
+  "rivers": "energy software, high-traffic platforms & cloud architecture",
+  "ekiti": "education platforms, government systems & cloud solutions",
+  "lagos": "enterprise software, fintech apps, high-scale web & DevOps",
+  "ogun": "manufacturing software, logistics systems & e-commerce",
+  "ondo": "agri-processing software, campus platforms & web apps",
+  "osun": "tourism platforms, education systems & business software",
+  "oyo": "publishing platforms, education systems & enterprise software"
+};
+
+export const seo = {
+  nigerialoglat,
+  allNigeriaStates,
+  nigeriaStateCities,
+  nigeriaStateCitiesHeroContent,
+  nigeriaStateLocalContent,
+  nigeriaStateMetaFocus,
+  stateDisplayNames
+};
